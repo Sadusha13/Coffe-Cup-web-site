@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100..900&display=swap');
 @import "tailwindcss";
 
+@keyframes coffee-spin {
+  from {
+		transform: rotate(0deg);
+  }
+  to {
+		transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+	animation: coffee-spin 40s linear infinite;
+}
+
+
+
 @theme {
 	--font-sans: "Poppins", sans-serif;
 	--font-cursive: "Pacifico", cursive;
