@@ -24,9 +24,8 @@ export const Navbar = () => {
   ]
 
   return (
-    <div className="w-full bg-gradient-to-r from-secondary to-primary/95">
-      <div className="container">
-        <div className="container mx-auto px-4 py-3">
+    <div className="w-full bg-linear-to-r from-secondary to-primary/95">
+      <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo section */}
             <div className="flex items-center gap-2 sm:gap-3">
@@ -92,7 +91,6 @@ export const Navbar = () => {
             </div>
           )}
         </div>
-      </div>
     </div>
   )
 }

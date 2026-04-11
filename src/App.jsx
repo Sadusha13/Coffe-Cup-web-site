@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./components/Home/Home";
+import { Services } from "./components/Services/Services";
 
 const App = () => {
   useEffect(() => {
@@ -14,9 +15,11 @@ const App = () => {
     });
   }, []);
   return (
-    <div className="overflow-x-hidden font-sans">
+    <div className="w-full min-h-screen overflow-x-hidden font-sans">
       <Navbar />
       <Home />
+      <Services/>
+      
     </div>
   )
 };
