@@ -28,6 +28,8 @@ const ServicesData = [
 ]
 export const Services = () => {
   return (
+    <>
+    <span id='services'></span>
     <div className="py-12 sm:py-14 bg-gray-100" id='services'>
         <div className='container'>
         {/*header title  */}
@@ -44,7 +46,7 @@ export const Services = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={index}
-                className="bg-white p-6 rounded-2xl hover:text-white shadow-xl hover:bg-primary duration-200 max-w-80 w-full group relative"
+                className="bg-white p-6 rounded-2xl hover:text-white shadow-xl hover:bg-primary duration-200 max-w-[300px]  group relative"
               >
                 {/* image section */}
                 <div className="h-36 sm:h-40">
@@ -65,5 +67,6 @@ export const Services = () => {
           })}
         </div>
     </div>
+    </>
   )
 }
