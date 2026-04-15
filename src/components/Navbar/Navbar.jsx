@@ -25,17 +25,17 @@ export const Navbar = () => {
 
   return (
     <div className="w-full bg-linear-to-r from-secondary to-primary/95">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-5 px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo section */}
             <div className="flex items-center gap-2 sm:gap-3">
               <img
                 src={Logo}
                 alt="Coffee Cafe logo"
-                className="h-14 w-14 object-contain sm:h-16 sm:w-16"
+                className="h-14 w-14 object-contain sm:h-12 sm:w-16 animate"
               />
               <span className="text-3xl font-bold font-cursive leading-none text-white">
-                Coffee Cafe
+                Master Cafe
               </span>
             </div>
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <button className="bg-white/15 px-4 md:px-5 py-2 rounded-full hover:scale-105 duration-200 flex items-center gap-2 text-white whitespace-nowrap">
+              <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:scale-105 transition">
                 Order
                 <FaCoffee className="text-base text-white" />
               </button>

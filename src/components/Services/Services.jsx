@@ -33,20 +33,20 @@ export const Services = () => {
     <div className="py-12 sm:py-14 bg-gray-100" id='services'>
         <div className='container'>
         {/*header title  */}
-        <div className='mb-10'>
+        <div className='mb-15'>
             <h1 className="text-4xl font-bold font-cursive text-gray-500 text-center">Best Coffee For You</h1>
         </div>
         </div>
 
         {/* services cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-6 container mx-auto place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 container mx-auto place-items-center">
           {ServicesData.map((data, index) => {
             return (
               <div
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={index}
-                className="bg-white p-6 rounded-2xl hover:text-white shadow-xl hover:bg-primary duration-200 max-w-[300px]  group relative"
+                className="bg-white p-6 rounded-2xl hover:text-white shadow-xl hover:bg-primary duration-200 max-w-300px  group relative"
               >
                 {/* image section */}
                 <div className="h-36 sm:h-40">
