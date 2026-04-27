@@ -60,6 +60,8 @@ const getSlidesToShow = (width) => {
 const Testimonial = () => {
   const [slidesToShow, setSlidesToShow] = useState(3);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const loopedTestimonials = [...testimonialData, ...testimonialData.slice(0, slidesToShow)];
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,27 +76,34 @@ const Testimonial = () => {
     };
   }, []);
 
-  const maxIndex = Math.max(0, testimonialData.length - slidesToShow);
-
   useEffect(() => {
-    if (activeIndex > maxIndex) {
-      setActiveIndex(maxIndex);
-    }
-  }, [activeIndex, maxIndex]);
-
-  useEffect(() => {
-    if (maxIndex === 0) {
+    if (testimonialData.length <= slidesToShow) {
       return undefined;
     }
 
     const intervalId = window.setInterval(() => {
-      setActiveIndex((currentIndex) => (currentIndex >= maxIndex ? 0 : currentIndex + 1));
+      setActiveIndex((currentIndex) => currentIndex + 1);
     }, 3000);
 
     return () => window.clearInterval(intervalId);
-  }, [maxIndex]);
+  }, [slidesToShow]);
 
   const translatePercent = (activeIndex * 100) / slidesToShow;
+
+  const handleTransitionEnd = () => {
+    if (activeIndex < testimonialData.length) {
+      return;
+    }
+
+    setIsTransitioning(false);
+    setActiveIndex(0);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        setIsTransitioning(true);
+      });
+    });
+  };
 
   return (
     <div className="py-14 mb-18">
@@ -105,12 +114,13 @@ const Testimonial = () => {
 
         <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-700 ease-in-out"
+            className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+            onTransitionEnd={handleTransitionEnd}
             style={{ transform: `translateX(-${translatePercent}%)` }}
           >
-            {testimonialData.map((data) => (
+            {loopedTestimonials.map((data, index) => (
               <div
-                key={data.id}
+                key={`${data.id}-${index}`}
                 className="shrink-0 px-3 pb-4 flex justify-center"
                 style={{ flex: `0 0 ${100 / slidesToShow}%` }}
               >
@@ -138,13 +148,13 @@ const Testimonial = () => {
         </div>
 
         <div className="mt-3 flex items-center justify-center gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+          {testimonialData.map((_, index) => (
             <button
               key={index}
               type="button"
               aria-label={`Go to testimonial slide ${index + 1}`}
               onClick={() => setActiveIndex(index)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
+              className={`h-2.5 rounded-full transition-all duration-200 ${
                 index === activeIndex ? 'w-8 bg-gray-700' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
               }`}
             />

@@ -7,6 +7,7 @@ import { Services } from "./components/Services/Services";
 import { Banner } from "./components/Banner/Banner";
 import AppStore from "./components/AppStote/AppStore";
 import Testimonial from "./components/Testimonial/Testimonial";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const App = () => {
       <Banner/>
       <AppStore/>
       <Testimonial/>
+      <Footer/>
       
     </div>
   )
