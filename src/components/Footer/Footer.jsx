@@ -3,95 +3,91 @@ import React from 'react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa6';
 
 const FooterLinks = [
-    {
-        title: "Home",
-        link: "/#",
+    { title: 'Home', href: '#home' },
+    { title: 'About', href: '#about' },
+    { title: 'Contact', href: '#contact' },
 
-    },
-    {
-        title: "About",
-        link: "/#about",
-    },
-    {
-        title: "Contact",
-        link: "/#contact",
-    },
-    {
-        title: "Blog",
-        link: "/#blog",
-    },
-    
 ];
 
-// No background image — use solid overlay only
-
-
+const QuickLinks = [
+    { title: 'Home', href: '#home' },
+    { title: 'Services', href: '#services' },
+    { title: 'Download App', href: '#contact' },
+];
 
 const Footer = () => {
     return (
-    <div className="text-white">
+        <footer
+            className="relative overflow-hidden text-[#f8eee5] bg-brand-dark"
+            style={{ backgroundImage: 'linear-gradient(135deg, #2B1D1A 0%, #6F4E37 55%, #3E2723 100%)' }}
+        >
+            <div className="absolute inset-0 bg-black/10" />
 
-    <div className="bg-black/50 py-1"> 
-        <div className="container grid md:grid cols-3 pb-8 pt-2">
-           {/* company  details*/}
-           <div className="py-8 px-4">
-            <a href="#"
-            className="font-semibold tracking-widest text-2xl sm:font-3xl font-cursive">
-                {" "} Coffee Cup</a>
-            <p className="pt-4">
-                Coffee Cup is a leading coffee company dedicated to providing high-quality coffee and exceptional customer service. With a passion for sourcing the finest beans and crafting delicious brews, we strive to create a memorable coffee experience for our customers. Whether you're looking for a cozy café atmosphere or convenient online ordering, Coffee Cup is your go-to destination for all things coffee.
-            </p>    
-            </div>
-        {/* Footer Links */}
-           <div className="col-span-2 grid-cols-2 sm:grid cols-3 md:pl-10">
-            <div className="py-8 px-4">
-                <h1 className="text-xl font-semibold sm:text-left mb-3">
-                    Quick Links
-                </h1>
-                <ul className="space-y-3">
-                    {FooterLinks.map((data, index) => (
-                        <li key={index} className="mb-2">
-                            <a href={data.link} 
-                            className="inline-block hover-scale-105 duration-200">
-                                {data.title}
+            <div className="relative mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-16 lg:py-16">
+                <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.9fr] lg:items-start">
+                    <section className="max-w-md">
+                        <a href="#" className="font-cursive text-4xl text-[#fff8ef] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+                            Master Cafe
+                        </a>
+                        <p className="mt-4 max-w-sm text-sm leading-6 text-[#f6e8d7] drop-shadow-[0_1px_1px_rgba(0,0,0,0.28)] sm:text-[15px]">
+                            Crafted Coffee, Cozy Vibes,
+                            <br />
+                            Unforgettable Moments - Your Perfect
+                            <br />
+                            Espresso Escape
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-semibold" style={{color: '#FFF8EF'}}>Footer Links</h2>
+                        <ul className="mt-5 space-y-3 text-sm text-[#FFF8EF] sm:text-[15px]">
+                            {FooterLinks.map((link) => (
+                                <li key={link.title}>
+                                    <a href={link.href} className="transition-colors duration-200 hover:text-accent">
+                                        {link.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-semibold" style={{color: '#FFF8EF'}}>Quick Links</h2>
+                        <ul className="mt-5 space-y-3 text-sm text-[#FFF8EF] sm:text-[15px]">
+                            {QuickLinks.map((link) => (
+                                <li key={link.title}>
+                                    <a href={link.href} className="transition-colors duration-200 hover:text-accent">
+                                        {link.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-semibold" style={{color: '#FFF8EF'}}>Address</h2>
+                        <div className="mt-5 space-y-3 text-sm leading-6 text-[#FFF8EF] sm:text-[15px]">
+                            <p>Colombo, Sri Lanka</p>
+                            <p>+94 11 123 4567</p>
+                        </div>
+
+                        <div className="mt-6 flex items-center gap-4 text-white">
+                            <a href="#" aria-label="Facebook" className="transition-colors duration-200 hover:text-accent">
+                                <FaFacebook className="text-2xl" />
                             </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            {/* company address*/}
-            <div className="py-8 px-4 col-span-2 sm:col-auto">
-                <h1>
-                    Address
-                </h1>
-                <div>
-                    <p className="mb-2">123 Coffee Street, Brewtown, USA</p>
-                    <p className="mb-2">Phone: (123) 456-7890</p>
-                    <p className="mb-2">Email: info@coffeecup.com</p>
-
-                    {/* social link*/}
-                    <div className="space-x-4 pt-4">
-                        <a href="#">
-                                <FaFacebook className="text-3xl hover:scale-105 duration-200" />
-                        </a>
-                          <a href="#">
-                                <FaLinkedin className="text-3xl hover:scale-105 duration-200" />
-                        </a>
-                          <a href="#">
-                                <FaInstagram className="text-3xl hover:scale-105 duration-200" />
-                        </a>
-                        
-                       
-                    </div>
+                            <a href="#" aria-label="LinkedIn" className="transition-colors duration-200 hover:text-accent">
+                                <FaLinkedin className="text-2xl" />
+                            </a>
+                            <a href="#" aria-label="Instagram" className="transition-colors duration-200 hover:text-accent">
+                                <FaInstagram className="text-2xl" />
+                            </a>
+                        </div>
+                    </section>
                 </div>
             </div>
-           </div>
-           </div>
-        </div>
-     </div>
-    
-        
-    )  
+        </footer>
+    );
 };
 
 export default Footer;

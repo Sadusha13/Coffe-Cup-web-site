@@ -4,7 +4,7 @@ import { FaCoffee } from "react-icons/fa";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-brand-dark flex justify-center items-center text-white overflow-visible">
+    <div id="home" className="min-h-screen flex justify-center items-center overflow-visible bg-[#F5F0EA]" style={{color: '#2d2016'}}>
       
       <div className="container pb-5 overflow-visible">
         
@@ -13,9 +13,17 @@ export const Home = () => {
           {/* LEFT SIDE */}
           <div className="flex flex-col justify-center">
             
-            <h1 className="text-5xl sm:text-4xl lg:text-7xl font-bold">
+            <h1 
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-once="true"
+            className="text-5xl sm:text-4xl lg:text-7xl font-bold" style={{color: '#2E2E2E'}}>
               We serve the richest{" "}
-              <span className="text-primary font-cursive">Coffee</span> in the city.
+              <span
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-once="true" 
+              className="text-primary font-cursive">Coffee</span> in the city.
             </h1>
 
             {/* GLASS BUTTON */}
@@ -24,19 +32,15 @@ export const Home = () => {
                 flex items-center gap-2
                 
                 px-6 py-3 rounded-full 
-                text-white font-semibold
-                
-                bg-white/10 backdrop-blur-md 
-                border border-white/20
+                font-semibold
                 
                 shadow-lg
                 
                 transition-all duration-300
                 
-                hover:bg-white/20 
                 hover:scale-105 
-                hover:shadow-[0_0_25px_rgba(255,255,255,0.3)]
-              ">
+                hover:shadow-[0_0_25px_rgba(90,62,43,0.4)]
+              " style={{backgroundColor: '#6F4E37', color: '#FFFFFF'}}>
                 <FaCoffee />
                 Coffee and Code
               </button>
@@ -47,6 +51,9 @@ export const Home = () => {
           {/* RIGHT SIDE IMAGE */}
           <div className="flex justify-center items-center relative overflow-visible">
             <img 
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-once="true"
               src={HeroImg} 
               alt="Coffee" 
               className="w-40 sm:w-96 sm:scale-110 mx-auto animate-spin-slow max-w-full"
@@ -54,12 +61,20 @@ export const Home = () => {
           </div>
 
           {/* FLOATING BOXES */}
-          <div className="  bg-linear-to-r from-primary to-secondary absolute top-3 right-100 p-2 rounded-xl">
-            <h1>Hey Coder</h1>
+          <div 
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-once="true"
+          className="absolute top-10 right-160 rounded-xl px-4 py-3 text-white shadow-lg" style={{backgroundColor: '#6F4E37'}}>
+            <h1 className="font-medium">Hey Coder</h1>
           </div>
 
-          <div className= " bg-linear-to-r from-primary to-secondary absolute bottom-5 right-20 p-3 rounded-xl">
-            <h1>Best Coffee</h1>
+          <div 
+          data-aos="fade-right"
+          data-aos-delay="600"
+          data-aos-once="true"
+          className="absolute bottom-5 right-20 rounded-xl px-4 py-3 text-white shadow-lg" style={{backgroundColor: '#6F4E37'}}>
+            <h1 className="font-medium">Best Coffee</h1>
           </div>
 
         </div>

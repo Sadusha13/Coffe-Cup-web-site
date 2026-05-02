@@ -13,9 +13,13 @@ const backgroundStyle = {
 };
 const AppStore = () => {
   return (
-    <section style={backgroundStyle} className="py-14 sm:py-10">
+    <section id="contact" style={backgroundStyle} className="py-14 sm:py-10">
       <div className="container mx-auto px-4">
-        <div className="max-w-md">
+        <div 
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-once="true"
+        className="max-w-md">
           <h2 className="text-3xl text-center sm:text-left font-bold pl-3 text-white/90">
             Download Our App
           </h2>

@@ -106,10 +106,10 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="py-14 mb-18">
+    <div id="blog" className="py-14 mb-18">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold font-cursive text-gray-800">Testimonials</h1>
+          <h1 className="text-4xl font-bold font-cursive" style={{color: '#2E2E2E'}}>Testimonials</h1>
         </div>
 
         <div className="overflow-hidden">
@@ -135,8 +135,8 @@ const Testimonial = () => {
                   
 
                   <div className="text-center">
-                    <h2 className="mb-3 text-xs text-shadow-xs font-sm text-gray-800">{data.testimonial}</h2>
-                    <p className="font-bold text-xl font-cursive text-black/80 leading-relaxed">{data.name}</p>
+                    <h2 className="mb-3 text-xs text-shadow-xs font-sm" style={{color: '#6D6D6D'}}>{data.testimonial}</h2>
+                    <p className="font-bold text-xl font-cursive leading-relaxed" style={{color: '#2E2E2E'}}>{data.name}</p>
                   </div>
                   <div className="text-align-right">
                     <p className="text-9xl text-black/20 font-serif">,,</p>

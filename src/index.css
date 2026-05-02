@@ -16,12 +16,18 @@
 
 
 
-@theme {
+:root {
 	--font-sans: "Poppins", sans-serif;
 	--font-cursive: "Pacifico", cursive;
-	--color-primary: #854d3d;
-	--color-secondary: #4a1e1b;
-	--color-brand-dark: #270c03;
+	--color-primary: #3E2723;
+	--color-secondary: #6F4E37;
+	--color-brand-dark: #2B1D1A;
+	--color-accent: #C8A27A;
+	--color-text-primary: #2E2E2E;
+	--color-text-secondary: #6D6D6D;
+	--color-text-light: #FFFFFF;
+	--color-button-primary: #6F4E37;
+	--color-button-hover: #5A3E2B;
 }
 
 body {
@@ -44,4 +50,7 @@ body {
 
 .font-cursive {
 	font-family: "Pacifico", cursive;
+}
+smooth-scroll {
+	scroll-behavior: smooth;
 }

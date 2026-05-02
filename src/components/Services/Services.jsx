@@ -30,11 +30,11 @@ export const Services = () => {
   return (
     <>
     <span id='services'></span>
-    <div className="py-12 sm:py-14 bg-gray-100" id='services'>
+    <div className="py-12 sm:py-14 bg-[#EDE3D9]" id='services'>
         <div className='container'>
         {/*header title  */}
         <div className='mb-15'>
-            <h1 className="text-4xl font-bold font-cursive text-gray-500 text-center">Best Coffee For You</h1>
+            <h1 className="text-4xl font-bold font-cursive text-center" style={{color: '#2E2E2E'}}>Best Coffee For You</h1>
         </div>
         </div>
 
@@ -46,7 +46,7 @@ export const Services = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={index}
-                className="bg-white p-6 rounded-2xl hover:text-white shadow-xl hover:bg-primary duration-200 max-w-300px  group relative"
+                className="p-6 rounded-2xl hover:text-white shadow-xl duration-200 max-w-300px  group relative" style={{backgroundColor: '#FBF7F3', borderLeft: '4px solid #C8A27A'}}
               >
                 {/* image section */}
                 <div className="h-36 sm:h-40">
@@ -59,8 +59,8 @@ export const Services = () => {
 
                 {/* text content */}
                 <div className='p-4 text-center'>
-                  <h1 className="text-xl font-bold">{data.name}</h1>
-                  <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">{data.description}</p>
+                  <h1 className="text-xl font-bold" style={{color: '#2E2E2E'}}>{data.name}</h1>
+                  <p className="text-sm line-clamp-2" style={{color: '#6D6D6D'}}>{data.description}</p>
                 </div>
               </div>
             )
