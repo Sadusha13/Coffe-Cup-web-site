@@ -34,7 +34,7 @@ export const Services = () => {
         <div className='container'>
         {/*header title  */}
         <div className='mb-15'>
-            <h1 className="text-4xl font-bold font-cursive text-center" style={{color: '#2E2E2E'}}>Best Coffee For You</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-cursive text-center" style={{color: '#2E2E2E'}}>Best Coffee For You</h1>
         </div>
         </div>
 
@@ -46,21 +46,21 @@ export const Services = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={index}
-                className="p-6 rounded-2xl hover:text-white shadow-xl duration-200 max-w-300px  group relative" style={{backgroundColor: '#FBF7F3', borderLeft: '4px solid #C8A27A'}}
+                className="p-4 sm:p-6 rounded-2xl hover:text-white shadow-xl duration-200 w-full sm:max-w-xs group relative" style={{backgroundColor: '#FBF7F3', borderLeft: '4px solid #C8A27A'}}
               >
                 {/* image section */}
-                <div className="h-36 sm:h-40">
+                <div className="h-28 sm:h-36 md:h-40">
                   <img
                     src={data.img}
                     alt=""
-                    className="max-w-52 sm:max-w-56 block mx-auto transform -translate-y-12 group-hover:scale-110 group-hover:rotate-6 duration-300"
+                    className="max-w-40 sm:max-w-52 md:max-w-56 block mx-auto transform -translate-y-8 sm:-translate-y-12 group-hover:scale-110 group-hover:rotate-6 duration-300"
                   />
                 </div>
 
                 {/* text content */}
-                <div className='p-4 text-center'>
-                  <h1 className="text-xl font-bold" style={{color: '#2E2E2E'}}>{data.name}</h1>
-                  <p className="text-sm line-clamp-2" style={{color: '#6D6D6D'}}>{data.description}</p>
+                <div className='p-2 sm:p-4 text-center'>
+                  <h1 className="text-lg sm:text-xl font-bold" style={{color: '#2E2E2E'}}>{data.name}</h1>
+                  <p className="text-xs sm:text-sm line-clamp-2" style={{color: '#6D6D6D'}}>{data.description}</p>
                 </div>
               </div>
             )

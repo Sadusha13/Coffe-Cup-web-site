@@ -24,9 +24,9 @@ const Footer = () => {
             <div className="absolute inset-0 bg-black/10" />
 
             <div className="relative mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-16 lg:py-16">
-                <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.9fr] lg:items-start">
-                    <section className="max-w-md">
-                        <a href="#" className="font-cursive text-4xl text-[#fff8ef] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+                <div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.9fr] lg:items-start">
+                    <section className="max-w-md sm:col-span-2 lg:col-span-1">
+                        <a href="#" className="font-cursive text-2xl sm:text-4xl text-[#fff8ef] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
                             Master Cafe
                         </a>
                         <p className="mt-4 max-w-sm text-sm leading-6 text-[#f6e8d7] drop-shadow-[0_1px_1px_rgba(0,0,0,0.28)] sm:text-[15px]">

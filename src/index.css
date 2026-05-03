@@ -51,6 +51,6 @@ body {
 .font-cursive {
 	font-family: "Pacifico", cursive;
 }
-smooth-scroll {
+ html{
 	scroll-behavior: smooth;
 }
